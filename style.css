@@ -2,12 +2,33 @@
     margin: 0;
     padding: 0;
 }
-
-main {
-    width: 100%;
+header{
+    padding: 20px;
+    text-align: center;
+}
+span{
+    font-size: 25px;
+}
+h1{
+    font-size: 45px;
 }
 #container{
-    width: 50%;
+    width: 33%;
+}
+#container-errada{
+    width: 33%;
+}
+#vidas{
+    width: 33%;
+}
+button{
+    cursor: pointer;
+    float:left;
+    margin: 0 10px 10px 0;
+    width:45px;
+    height:40px;
+    border-radius: 8px;
+    font-size: 20px;
 }
 #container > span {
     padding-left: 20px;
@@ -17,11 +38,25 @@ main {
     padding-left: 3px;
 }
 main{
+    padding-top: 20px;
     display: flex;
-    flex-direction: row;
-    gap: 10px;
+    flex-direction: column;
 }
 .tentativas{
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+}
+#alfabeto {
+    list-style: none;
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+  }
+.primeiro-container{
+    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
 }
