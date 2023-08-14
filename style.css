@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    width: 100%;
+}
+#container{
+    width: 50%;
+}
+#container > span {
+    padding-left: 20px;
+    letter-spacing: 10px;
+}
+#container-errada > span {
+    padding-left: 3px;
+}
+main{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.tentativas{
+    display: flex;
+    flex-direction: column;
+}
