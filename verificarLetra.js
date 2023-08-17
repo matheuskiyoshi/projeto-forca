@@ -1,5 +1,7 @@
-let vidas = 7;
+let vidas = 6;
+
 function verificarLetra(letra, button, palavra, palavraChance) {
+
     // Processamento da letra na palavra
     let letraNaPalavra = false;
     let tentativaDeResposta = '';
@@ -36,8 +38,47 @@ function verificarLetra(letra, button, palavra, palavraChance) {
             button.disabled = true;
         });
     } else if (!letraNaPalavra) {
+
         vidas--;
 
+        const canvas = document.querySelector('#boneco');
+        if (!canvas.getContext) { return; }
+        const ctx = canvas.getContext('2d');
+
+        ctx.beginPath();
+        ctx.lineWidth = 8;
+        ctx.strokeStyle = 'black';
+
+        switch (vidas) {
+            case 5:
+                ctx.arc(350, 170, 50, 1.5 * Math.PI, 4 * Math.PI);
+                break;
+            case 4:
+                ctx.moveTo(350, 220);
+                ctx.lineTo(350, 350);
+                break;
+            case 3:
+                ctx.moveTo(350, 240);
+                ctx.lineTo(380, 330);
+                break;
+            case 2:
+                ctx.moveTo(350, 240);
+                ctx.lineTo(320, 330);
+                break;
+            case 1:
+                ctx.moveTo(350, 350);
+                ctx.lineTo(330, 440);
+                break;
+            case 0:
+                ctx.moveTo(350, 350);
+                ctx.lineTo(370, 440);
+                break;
+        }
+
+        ctx.stroke();
+
+        // set line stroke and line width
+        ctx.strokeStyle = 'black';
         if(vidas === 0){
             vidasSpan.textContent = `Você perdeu. A palavra era "${palavra}". Tente novamente!`;
             const buttons = document.querySelectorAll('#alfabeto button');
@@ -58,6 +99,7 @@ function verificarLetra(letra, button, palavra, palavraChance) {
         const containerErrada = document.getElementById('container-errada');
         containerErrada.appendChild(letraErrada);
     }
+
     button.disabled = true;
     return tentativaDeResposta;
 }
