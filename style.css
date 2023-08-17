@@ -67,3 +67,7 @@ main{
     width: 500px;
     margin-left: 50px;
 }
+#reset {
+    width: 100px;
+    display: none;
+}

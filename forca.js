@@ -1,4 +1,4 @@
-function draw() {
+function desenhaForca() {
     const canvas = document.querySelector('#boneco');
 
     if (!canvas.getContext) {
@@ -6,6 +6,7 @@ function draw() {
     }
     const ctx = canvas.getContext('2d');
 
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
     // set line stroke and line width
     ctx.strokeStyle = 'black';
 
@@ -27,4 +28,4 @@ function draw() {
 
 }
 
-draw();
+export default desenhaForca;

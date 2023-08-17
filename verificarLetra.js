@@ -31,12 +31,16 @@ function verificarLetra(letra, button, palavra, palavraChance) {
 
     // Adiciona a letra errada, se necessário
     const vidasSpan = document.getElementById('vidas');
-    if(tentativaDeResposta === palavra){
+    
+    if (tentativaDeResposta === palavra){
         vidasSpan.textContent = `Parabéns! Você adivinhou a palavra "${palavra}"!`;
         const buttons = document.querySelectorAll('#alfabeto button');
         buttons.forEach(button => {
             button.disabled = true;
         });
+        const resetButton = document.querySelector('#reset');
+        resetButton.style.display = "block";
+        vidas = 6;
     } else if (!letraNaPalavra) {
 
         vidas--;
@@ -85,7 +89,10 @@ function verificarLetra(letra, button, palavra, palavraChance) {
             buttons.forEach(button => {
                 button.disabled = true;
             });
-        } else{
+            const resetButton = document.querySelector('#reset');
+            resetButton.style.display = "block";
+            vidas = 6;
+        } else {
             vidasSpan.textContent = `Você tem ${vidas} ${vidas === 1 ? 'tentativa' : 'tentativas'}.`;  
         }
 

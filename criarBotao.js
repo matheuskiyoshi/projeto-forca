@@ -1,6 +1,7 @@
 import verificarLetra from "./verificarLetra.js";
 
 const criarBotao = (palavra) => {
+
     const alfabeto = 'abcdefghijklmnopqrstuvwxyz';
     const botoesAlfabeto = document.getElementById('botoes');
 
