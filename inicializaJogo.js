@@ -4,11 +4,13 @@ import desenhaForca from './forca.js';
 
 const resetButton = document.querySelector('#reset');
 
-const inicializarJogo = () => {
+const inicializarJogo = async () => {
 
     desenhaForca();
 
-    const palavra = palavraAleatoria();
+    const entrada = await palavraAleatoria();
+    const palavra = entrada[0];
+    const descricao = entrada[1];
   
     let palavraSecreta = '';
   
@@ -38,6 +40,9 @@ const inicializarJogo = () => {
 
     const message = document.querySelector('#vidas');
     message.innerHTML = "Você tem 6 tentativas"
+
+    const desc = document.querySelector('#descricao');
+    desc.innerHTML = descricao;
 
     resetButton.style.display = "none";
 };
