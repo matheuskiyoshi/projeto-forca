@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: #c1dcdc;
+}
+header{
+    padding: 20px;
+    text-align: center;
+}
+span{
+    font-size: 25px;
+}
+h1{
+    font-size: 45px;
+}
+#container{
+    width: 33%;
+}
+#container-errada{
+    width: 33%;
+}
+#vidas{
+    width: 33%;
+}
+button{
+    cursor: pointer;
+    float:left;
+    margin: 0 10px 10px 0;
+    width:45px;
+    height:40px;
+    border-radius: 8px;
+    font-size: 20px;
+}
+#container > span {
+    padding-left: 20px;
+    letter-spacing: 10px;
+}
+#container-errada > span {
+    padding-left: 3px;
+}
+main{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.tentativas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    flex-wrap: wrap;
+}
+#alfabeto {
+    list-style: none;
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    flex-wrap: wrap;
+  }
+.primeiro-container{
+    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+}
+#boneco {
+    height: 500px; 
+    width: 500px;
+    margin-left: 50px;
+}
+#reset {
+    width: 100px;
+    display: none;
+    z-index: 11; 
+}
+#buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+#descricao {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.confetti{
+   width: 100%;
+   height: 80%;
+   display: block;
+   position: absolute;
+   margin: 0 auto;
+   border: 1px solid #ddd;
+   user-select: none;
+   z-index: -1;
+   opacity: 0.5;
+}
+
