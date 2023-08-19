@@ -1,6 +1,12 @@
+import initConfetti from "./confetti.js";
+
 let vidas = 6;
 
-function verificarLetra(letra, button, palavra, palavraChance) {
+export const rVida = () => {
+    vidas = 6;
+}
+
+export const verificarLetra = (letra, button, palavra, palavraChance) => {
 
     // Processamento da letra na palavra
     let letraNaPalavra = false;
@@ -38,9 +44,9 @@ function verificarLetra(letra, button, palavra, palavraChance) {
         buttons.forEach(button => {
             button.disabled = true;
         });
-        const resetButton = document.querySelector('#reset');
-        resetButton.style.display = "block";
-        vidas = 6;
+        const confetti = document.querySelector('#canvas');
+        confetti.style.zIndex = 10; 
+        initConfetti();
     } else if (!letraNaPalavra) {
 
         vidas--;
@@ -89,9 +95,6 @@ function verificarLetra(letra, button, palavra, palavraChance) {
             buttons.forEach(button => {
                 button.disabled = true;
             });
-            const resetButton = document.querySelector('#reset');
-            resetButton.style.display = "block";
-            vidas = 6;
         } else {
             vidasSpan.textContent = `Você tem ${vidas} ${vidas === 1 ? 'tentativa' : 'tentativas'}.`;  
         }
@@ -111,4 +114,4 @@ function verificarLetra(letra, button, palavra, palavraChance) {
     return tentativaDeResposta;
 }
 
-export default verificarLetra;
+export default { rVida, verificarLetra };

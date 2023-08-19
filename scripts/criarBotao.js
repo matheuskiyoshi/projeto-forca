@@ -1,4 +1,4 @@
-import verificarLetra from "./verificarLetra.js";
+import { rVida, verificarLetra} from "./verificarLetra.js";
 
 const criarBotao = (palavra) => {
 

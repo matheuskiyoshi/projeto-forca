@@ -1,12 +1,18 @@
 import palavraAleatoria from './selecionarPalavra.js';
 import criarBotao from './criarBotao.js';
 import desenhaForca from './forca.js';
+import { rVida, verificarLetra } from './verificarLetra.js';
 
 const resetButton = document.querySelector('#reset');
 
 const inicializarJogo = async () => {
 
+    const confetti = document.querySelector('#canvas');
+    confetti.style.zIndex = -1; 
+
     resetButton.style.display = "none";
+
+    rVida(6);
 
     desenhaForca();
 

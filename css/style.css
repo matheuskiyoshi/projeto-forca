@@ -48,12 +48,14 @@ main{
     justify-content: center;
     align-items: center;
     padding-top: 100px;
+    flex-wrap: wrap;
 }
 #alfabeto {
     list-style: none;
     display: flex; 
     justify-content: center;
     align-items: center; 
+    flex-wrap: wrap;
   }
 .primeiro-container{
     padding-top: 50px;
@@ -70,6 +72,7 @@ main{
 #reset {
     width: 100px;
     display: none;
+    z-index: 11; 
 }
 #buttons{
     display: flex;
@@ -81,3 +84,15 @@ main{
     margin-left: 20px;
     margin-right: 20px;
 }
+.confetti{
+   width: 100%;
+   height: 80%;
+   display: block;
+   position: absolute;
+   margin: 0 auto;
+   border: 1px solid #ddd;
+   user-select: none;
+   z-index: -1;
+   opacity: 0.5;
+}
+
