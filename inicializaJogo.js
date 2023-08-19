@@ -6,6 +6,8 @@ const resetButton = document.querySelector('#reset');
 
 const inicializarJogo = async () => {
 
+    resetButton.style.display = "none";
+
     desenhaForca();
 
     const entrada = await palavraAleatoria();
@@ -44,7 +46,7 @@ const inicializarJogo = async () => {
     const desc = document.querySelector('#descricao');
     desc.innerHTML = descricao;
 
-    resetButton.style.display = "none";
+    resetButton.style.display = "block";
 };
 
 resetButton.addEventListener("click", inicializarJogo);

@@ -22,7 +22,7 @@ const palavraAleatoria = async () => {
         const rword = await fetch(dicio+"random");
         const dados = await rword.text();
         palavra = JSON.parse(dados).word;
-    } while (palavra.lenght < 8);
+    } while (palavra.length < 5 || palavra.length >= 10);
     
     console.log(palavra);
 
