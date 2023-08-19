@@ -19,13 +19,10 @@ export const verificarLetra = (letra, button, palavra, palavraChance) => {
                 letraNaPalavra = true;
             }
         } else if (
-            palavra[i].normalize('NFD').replace(/[\u0300-\u036f]/g, '') === letra ||
             palavra[i].toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '') === letra
         ) {
             tentativaDeResposta += palavraChance[i] === letra ? letra : palavra[i];
-            if (palavra[i] === letra) {
-                letraNaPalavra = true;
-            }
+            letraNaPalavra = true;
         } else {
             tentativaDeResposta += palavraChance[i];
         }
@@ -47,6 +44,7 @@ export const verificarLetra = (letra, button, palavra, palavraChance) => {
         const confetti = document.querySelector('#canvas');
         confetti.style.zIndex = 10; 
         initConfetti();
+        
     } else if (!letraNaPalavra) {
 
         vidas--;
