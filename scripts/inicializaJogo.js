@@ -41,7 +41,6 @@ const inicializarJogo = async () => {
     const containerERR = document.querySelector('#container-errada');
     containerERR.innerHTML = "";
     
-    console.log(palavra);
     const botoes = document.querySelector('#botoes');
     botoes.innerHTML = "";
     criarBotao(palavra);

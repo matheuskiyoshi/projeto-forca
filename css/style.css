@@ -30,6 +30,10 @@ button{
     height:40px;
     border-radius: 8px;
     font-size: 20px;
+
+    &:hover{
+        background-color: #a7c4c4;
+    }
 }
 #container > span {
     padding-left: 20px;
@@ -96,3 +100,10 @@ main{
    opacity: 0.5;
 }
 
+@media(max-width: 1024px){
+    .primeiro-container{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+}
