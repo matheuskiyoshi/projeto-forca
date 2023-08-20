@@ -24,15 +24,13 @@ const palavraAleatoria = async () => {
         palavra = JSON.parse(dados).word;
     } while (palavra.length < 5 || palavra.length >= 10);
     
-    console.log(palavra);
+    console.log(palavra); //Resposta da forca
 
     const word = await fetch(dicio+"word/"+palavra);
     const wordData = await word.text();
     const definitions = JSON.parse(wordData)[0].xml;
     const xmlDefinitions = new DOMParser().parseFromString(definitions, "text/xml");
     const descricao = xmlDefinitions.querySelector("def").textContent;
-
-    console.log(descricao);
 
     return [palavra,descricao] ;
 }

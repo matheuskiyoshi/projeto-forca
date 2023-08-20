@@ -1,15 +1,15 @@
-import { rVida, verificarLetra} from "./verificarLetra.js";
+import { verificarLetra} from "./verificarLetra.js";
 
 const criarBotao = (palavra) => {
 
     const alfabeto = 'abcdefghijklmnopqrstuvwxyz';
     const botoesAlfabeto = document.getElementById('botoes');
 
-    let palavraChance = '_'.repeat(palavra.length);
-  
     const letras = document.createElement('ul');
     letras.id = 'alfabeto';
-  
+
+    let palavraChance = '_'.repeat(palavra.length);
+    
     for (let i = 0; i < alfabeto.length; i++) {
       const letra = alfabeto[i];
   

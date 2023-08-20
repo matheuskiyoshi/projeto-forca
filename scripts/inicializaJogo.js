@@ -1,7 +1,7 @@
 import palavraAleatoria from './selecionarPalavra.js';
 import criarBotao from './criarBotao.js';
 import desenhaForca from './forca.js';
-import { rVida, verificarLetra } from './verificarLetra.js';
+import { rVida } from './verificarLetra.js';
 
 const resetButton = document.querySelector('#reset');
 

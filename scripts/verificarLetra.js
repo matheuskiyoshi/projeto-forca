@@ -21,7 +21,7 @@ export const verificarLetra = (letra, button, palavra, palavraChance) => {
         } else if (
             palavra[i].toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '') === letra
         ) {
-            tentativaDeResposta += palavraChance[i] === letra ? letra : palavra[i];
+            tentativaDeResposta += palavra[i];
             letraNaPalavra = true;
         } else {
             tentativaDeResposta += palavraChance[i];
